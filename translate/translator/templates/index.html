@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translate</title>
+</head>
+<body>
+    <h1>Translate your text to another language</h1>
+    <form action="/translate" method="post">
+        {% csrf_token %}
+        <label>From: </label>
+        <select name="from">
+            <option value="english">English</option>
+        </select>
+        <label>To: </label>
+        <select name="to">
+            <option value="spanish">Spanish</option>
+        </select>
+        <input type="text" name="userInput">
+        <button>Translate</button>
+    </form>
+</body>
+</html>
