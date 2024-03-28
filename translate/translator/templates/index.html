@@ -4,21 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translate</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <script src="../static/js/script.js" defer></script>
 </head>
 <body>
-    <h1>Translate your text to another language</h1>
-    <form action="/translate" method="post">
+    <h1 class="top">Translate your text to another language</h1>
+    <form onsubmit="translator(event)" action="#" method="post" class="form" >
         {% csrf_token %}
-        <label>From: </label>
-        <select name="from">
-            <option value="english">English</option>
-        </select>
-        <label>To: </label>
-        <select name="to">
-            <option value="spanish">Spanish</option>
-        </select>
-        <input type="text" name="userInput">
-        <button>Translate</button>
+        <div>
+            <label>From: </label>
+            <select name="from">
+                <option value="english">English</option>
+            </select>
+            <label>To: </label>
+            <select name="to">
+                <option value="spanish">Spanish</option>
+            </select>
+        </div>
+        <div class="convo">
+            <p class="userInput bubble">Test input</p>
+            <p class="response bubble">Test Response</p>
+        </div>
+        <input type="text" name="userInput" id="input">
+        <!-- <button>Translate</button> -->
     </form>
 </body>
 </html>
